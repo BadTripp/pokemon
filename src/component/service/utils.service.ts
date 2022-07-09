@@ -1,7 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -17,7 +14,11 @@ export class UtilsService {
     return this.httpClient.post(this.url + "/findPokemon?name=" + pokemonId, {});
   }
   
-  getAll(){
+  getAllPokemon(){
     return this.httpClient.post(this.url + "/getallpokemon", {});
+  }
+
+  getAllMoves(){
+    return this.httpClient.post(this.url + "/getallmoves", {});
   }
 }

@@ -12,6 +12,7 @@
             <th >Velocita</th>      
         </thead>
         <tbody *ngFor="let pokemon of pokemonList" > 
+<<<<<<< Updated upstream
         <tr >
             <td><img [src]="pokemon.img" height="50px" width="50px"></td> 
             <td >{{pokemon.name}}</td>
@@ -26,4 +27,18 @@
     
     
 </table>
+=======
+            <tr scope="row">
+                <td><img [src]="pokemon.img" height="50px" width="50px"></td> 
+                <td class="align-middle">{{pokemon.name}}</td>
+                <td class="align-middle">{{pokemon.type}}</td>
+                <td class="align-middle">{{pokemon.level}}</td>
+                <td class="align-middle">{{pokemon.health}}</td>
+                <td class="align-middle">{{pokemon.attack}}</td>
+                <td class="align-middle">{{pokemon.defense}}</td>
+                <td class="align-middle">{{pokemon.speed}}</td>
+            </tr>
+        </tbody>  
+    </table>
+>>>>>>> Stashed changes
 </div>

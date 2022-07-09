@@ -11,7 +11,7 @@ export class BattlefieldComponent implements OnInit {
 
   constructor(private srv: UtilsService) { }
   
-  pokemon$: Observable<any> = this.srv.getAll();
+  pokemon$: Observable<any> = this.srv.getAllPokemon();
   pokemon={};
 
   ngOnInit(): void {

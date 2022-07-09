@@ -12,16 +12,15 @@ export class PokemonListComponent implements OnInit {
 
   
 
-  constructor(private Serv:UtilsService) { }
+  constructor(private srv:UtilsService) { }
 
-  pokemonList$: Observable<any> = this.Serv.getAll();
+  pokemonList$: Observable<any> = this.srv.getAllPokemon();
   pokemonList : Pokemon[] = [];
   
 
   ngOnInit(): void {
     this.pokemonList$.subscribe((p) => {
-      
-    this.pokemonList= p;
+      this.pokemonList= p;
     });
   }
 

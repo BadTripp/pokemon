@@ -15,26 +15,35 @@
     align-self: center;
 }
 .form-play input {
-    height: 100px;
+    height: 70px;
     width: 150px;
     border:0ch;
     background: transparent;
     text-decoration: none;
+    font-size: large;
+    text-align: center;
+    
 }
 .form-play button {
     border-radius: 15px;
     border:2px solid rgb(39, 160, 208);
     background: transparent;
-    height: 100px;
-    width: 150px;
+    height: 50px;
+    width: 100px;
     font-weight: 600;
+    margin-top: 10px;
 }
 .form-play button:hover {
     cursor:pointer;
     border-radius: 15px;
     border:2px solid rgb(39, 160, 208);
     background: rgb(39, 160, 208);
-    height: 100px;
-    width: 150px;
+    height: 50px;
+    width: 100px;
     font-weight: 600;
+}
+.select-form-play{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 130px;
 }

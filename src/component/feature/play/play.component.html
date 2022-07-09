@@ -1,6 +1,26 @@
 <div class="container">
     <form class="form-play">
-    <input type="text" placeholder="Username">
+    <input type="text" placeholder="Username"><br>
+    <select class="select-form-play">
+        <option *ngFor="let moves of movesList">
+            {{moves.name}}
+        </option>
+    </select>
+    <select class="select-form-play">
+        <option *ngFor="let moves of movesList">
+            {{moves.name}}
+        </option>
+    </select>
+    <select class="select-form-play">
+        <option *ngFor="let moves of movesList">
+            {{moves.name}}
+        </option>
+    </select>
+    <select class="select-form-play">
+        <option *ngFor="let moves of movesList">
+            {{moves.name}}
+        </option>
+    </select>
     <button type="button" class="btn-play" >Gioca</button>
     </form>
 </div>
