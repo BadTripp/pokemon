@@ -1,0 +1,33 @@
+.container{
+    position: absolute;
+    height: 60%;
+    width: auto;
+    
+    padding: 20px 7%;
+    border-radius: 25px;
+    background-color:rgba(22, 194, 197, 0.5);
+    margin-left: 40%;
+    overflow-y: auto;
+    max-height: 400px;
+    
+}
+.card{
+    display: flex;
+    flex-direction: row;
+}
+table{
+    
+}
+.table th {
+    padding: 20px;
+      
+}
+.table tr{
+    margin: 20px;
+}
+.table td {
+    padding: 10px;  
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid black;
+}

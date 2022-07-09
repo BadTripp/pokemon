@@ -1,0 +1,29 @@
+
+<div class="container">
+  
+
+    <table class="table">
+        <thead >
+            
+            <th >Nome</th>
+            <th >Tipo</th>
+            <th >Effect</th>
+            <th >Power</th>
+            <th >Precision</th>
+        </thead>
+        <tbody *ngFor="let move of movesList" > 
+        <tr >
+       
+            
+            <td >{{move.name}}</td>
+            <td >{{move.type}}</td>
+            <td >{{move.effect}}</td>
+            <td >{{move.power}}</td>
+            <td >{{move.precision}}</td>
+            
+        </tr>
+    </tbody>
+    
+    
+</table>
+</div>

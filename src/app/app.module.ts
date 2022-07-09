@@ -10,6 +10,7 @@ import { PokemonListComponent } from '../component/feature/pokemon-list/pokemon-
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from '../component/share/navbar/navbar.component';
 import { PlayComponent } from '../component/feature/play/play.component';
+import { MovesListComponent } from './moves-list/moves-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PlayComponent } from '../component/feature/play/play.component';
     NavbarComponent,
     PokemonListComponent,
     HomeComponent,
-    PlayComponent
+    PlayComponent,
+    MovesListComponent
   ],
   imports: [
     BrowserModule,
