@@ -1,6 +1,6 @@
 <div class="container">
-    <form class="form-play" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="Username" formControlName="username"><br>
+    <form class="form-play" [formGroup]="player1Form" (ngSubmit)="onSubmit1()">
+    <input required type="text" placeholder="Username" formControlName="username"><br>
     <select class="select-form-play" formControlName="pokemon1">
         <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">
             {{pokemon.name}}
@@ -16,6 +16,29 @@
             {{pokemon.name}}
         </option>
     </select>
-    <button type="button" class="btn-play" type="submit">Gioca</button>
+    <button type="button" class="btn-play" type="submit">Conferma Giocatore 1</button>
     </form>
+
+    <form class="form-play" [formGroup]="player2Form" (ngSubmit)="onSubmit2()">
+        <input type="text" placeholder="Username" formControlName="username"><br>
+        <select class="select-form-play" formControlName="pokemon1">
+            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">
+                {{pokemon.name}}
+            </option>
+        </select>
+        <select class="select-form-play" formControlName="pokemon2">
+            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">
+                {{pokemon.name}}
+            </option>
+            </select>
+        <select class="select-form-play" formControlName="pokemon3">
+            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">
+                {{pokemon.name}}
+            </option>
+        </select>
+    <button type="button" class="btn-play" type="submit">Conferma Giocatore 2</button>
+    </form>
+
+    <button *ngIf="player1ready&&player2ready" type="button" class="btn-play" onclick="goBattle()">Gioca</button>
+
 </div>
