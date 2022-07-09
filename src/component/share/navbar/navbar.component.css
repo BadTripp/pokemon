@@ -1,0 +1,31 @@
+ 	
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    
+}
+.logo{
+    width: 140px;
+    cursor: pointer;
+}
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+
+}
+li :hover{
+    border: 5px solid black;
+    font-size: 18px;
+    color: red;
+}
+
+.nav-links li a {
+    
+    text-decoration: none;
+    color: rgb(43, 52, 60);
+}
+
+    

@@ -1,0 +1,19 @@
+.container{
+    position: absolute;
+    height: 60%;
+    width: 70%;
+    
+    padding: 20px 7%;
+    border-radius: 25px;
+    background-color:rgba(22, 194, 197, 0.5);
+    
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+}
+.stats{
+    
+}

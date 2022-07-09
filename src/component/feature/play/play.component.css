@@ -1,0 +1,40 @@
+.container{
+    position: absolute;
+    height: 60%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 7%;
+    border-radius: 25px;
+    background-color:rgba(22, 194, 197, 0.5);
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.form-play{
+    align-self: center;
+}
+.form-play input {
+    height: 100px;
+    width: 150px;
+    border:0ch;
+    background: transparent;
+    text-decoration: none;
+}
+.form-play button {
+    border-radius: 15px;
+    border:2px solid rgb(39, 160, 208);
+    background: transparent;
+    height: 100px;
+    width: 150px;
+    font-weight: 600;
+}
+.form-play button:hover {
+    cursor:pointer;
+    border-radius: 15px;
+    border:2px solid rgb(39, 160, 208);
+    background: rgb(39, 160, 208);
+    height: 100px;
+    width: 150px;
+    font-weight: 600;
+}
