@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from '../component/share/navbar/navbar.component';
 import { PlayComponent } from '../component/feature/play/play.component';
 import { MovesListComponent } from '../component/feature/moves-list/moves-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MovesListComponent } from '../component/feature/moves-list/moves-list.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [UtilsService],
   bootstrap: [AppComponent]
