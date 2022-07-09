@@ -1,26 +1,26 @@
 
 <div class="container">
     <table class="table">
-        <thead class=".thead-dark">
-            <th scope="col"></th>
-            <th scope="col">Nome</th>
-            <th scope="col">Tipo</th>
-            <th scope="col">Livello</th>
-            <th scope="col">Vita</th>
-            <th scope="col">Attacco</th>
-            <th scope="col">Difesa</th>
-            <th scope="col">Velocita</th>      
+        <thead >
+            <th ></th>
+            <th >Nome</th>
+            <th >Tipo</th>
+            <th >Livello</th>
+            <th >Vita</th>
+            <th >Attacco</th>
+            <th >Difesa</th>
+            <th >Velocita</th>      
         </thead>
         <tbody *ngFor="let pokemon of pokemonList" > 
-        <tr scope="row">
+        <tr >
             <td><img [src]="pokemon.img" height="50px" width="50px"></td> 
-            <td class="align-middle">{{pokemon.name}}</td>
-            <td class="align-middle">{{pokemon.type}}</td>
-            <td class="align-middle">{{pokemon.level}}</td>
-            <td class="align-middle">{{pokemon.health}}</td>
-            <td class="align-middle">{{pokemon.attack}}</td>
-            <td class="align-middle">{{pokemon.defense}}</td>
-            <td class="align-middle">{{pokemon.speed}}</td>
+            <td >{{pokemon.name}}</td>
+            <td >{{pokemon.type}}</td>
+            <td >{{pokemon.level}}</td>
+            <td >{{pokemon.health}}</td>
+            <td >{{pokemon.attack}}</td>
+            <td >{{pokemon.defense}}</td>
+            <td >{{pokemon.speed}}</td>
         </tr>
     </tbody>
     

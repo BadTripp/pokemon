@@ -6,14 +6,27 @@
     padding: 20px 7%;
     border-radius: 25px;
     background-color:rgba(22, 194, 197, 0.5);
+    margin-left: 20%;
+    overflow-y: auto;
     
-    margin-left: 7%;
-    margin-right: 7%;
 }
 .card{
     display: flex;
     flex-direction: row;
 }
-.stats{
+table{
     
+}
+img{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.table th {
+    padding: 20px;  
+}
+.table td {
+    padding: 10px;  
+    text-align: center;
+    border-bottom: 1px solid black;
 }
