@@ -2,14 +2,14 @@ import { POKEMON, Pokemon } from "./Pokemon";
 
 export interface Player { 
     name: string;
-    moves: Pokemon[];
+    pokemon: Pokemon[];
     health: number;
     wins: number
 }
 
 export const PLAYER: Player = {
     name: "",
-    moves: [POKEMON],
+    pokemon: [POKEMON],
     health: 0,
     wins: 0,
 }

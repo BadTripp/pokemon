@@ -1,21 +1,21 @@
 <div class="container">
-    <form class="form-play">
-    <input type="text" placeholder="Username"><br>
-    <select class="select-form-play">
-        <option *ngFor="let moves of pokemonList">
-            {{moves.name}}
+    <form class="form-play" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Username" formControlName="username"><br>
+    <select class="select-form-play" formControlName="pokemon1">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">
+            {{pokemon.name}}
         </option>
     </select>
-    <select class="select-form-play">
-        <option *ngFor="let moves of pokemonList">
-            {{moves.name}}
+    <select class="select-form-play" formControlName="pokemon2">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">
+            {{pokemon.name}}
         </option>
     </select>
-    <select class="select-form-play">
-        <option *ngFor="let moves of pokemonList">
-            {{moves.name}}
+    <select class="select-form-play" formControlName="pokemon3">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">
+            {{pokemon.name}}
         </option>
     </select>
-    <button type="button" class="btn-play" >Gioca</button>
+    <button type="button" class="btn-play" type="submit">Gioca</button>
     </form>
 </div>
