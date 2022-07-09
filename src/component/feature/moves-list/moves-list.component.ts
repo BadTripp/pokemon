@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UtilsService } from 'src/component/service/utils.service';
-import { Moves } from '../Interface/Moves';
+import { Moves } from '../../../app/Interface/Moves';
 
 @Component({
   selector: 'app-moves-list',
