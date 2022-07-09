@@ -2,14 +2,14 @@
     
     
     <form class="form-play" [formGroup]="player1Form" (ngSubmit)="onSubmit1()">
-    
+        <h2>Player 1</h2>
         <b>Username</b>
 
     <div class="input-form">
     <input required type="text" placeholder="Username" formControlName="username">
     </div>
 
-    <b>Moves</b>
+    <b>Pokemon</b>
 
     <div class="select-form">
         
@@ -35,13 +35,14 @@
     </form>
 
 
-
+    
     <form class="form-play" [formGroup]="player2Form" (ngSubmit)="onSubmit2()">
+        <h2>Player 2</h2>
         <b>Username</b>
         <div class="input-form">
         <input type="text" placeholder="Username" formControlName="username">
         </div>
-        <b>Moves</b>
+        <b>Pokemon</b>
         <div class="select-form">
         <select class="select-form-play" formControlName="pokemon1">
             <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">
