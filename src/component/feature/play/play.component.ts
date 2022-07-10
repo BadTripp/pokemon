@@ -62,6 +62,7 @@ export class PlayComponent implements OnInit {
 
   goBattle(){
     console.log('routing in battlefield', this.player); 
+    
     //routing in battlefield
     this.route.navigate(["battlefield"],{state : { players : this.player }} );
   }

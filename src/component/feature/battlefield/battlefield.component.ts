@@ -33,20 +33,22 @@ export class BattlefieldComponent implements OnInit {
       // IMPORT OBJ PLAYER 1 AND 2 FROM PLAY COMPONENT
       let nav : Navigation | any = this.route.getCurrentNavigation();
 
+      
       // GET AND SET PLAYER DATA
-      if(nav.extras && nav.extras.state && nav.extras.state['player1']){
+      if(nav.extras && nav.extras.state && nav.extras.state['players']){
         
-        this.usernamePlayer1=nav.extras.state['player1'].name;
-        this.movesPlayer1=nav.extras.state['player1'].pokemon[0].moves;
-        this.img_Pokemon_Player1=nav.extras.state['player1'].pokemon[0].img;
+        
+        this.usernamePlayer1=nav.extras.state['players'].name;
+        this.movesPlayer1=nav.extras.state['players'].pokemon[0].moves;
+        this.img_Pokemon_Player1=nav.extras.state['players'].pokemon[0].img;
         
       }
 
-      if(nav.extras && nav.extras.state && nav.extras.state['player2']){
+      if(nav.extras && nav.extras.state && nav.extras.state['players']){
         
-        this.usernamePlayer2=nav.extras.state['player2'].name;
-        this.movesPlayer2=nav.extras.state['player2'].pokemon[0].moves;
-        this.img_Pokemon_Player2=nav.extras.state['player2'].pokemon[0].img;
+        this.usernamePlayer2=nav.extras.state['players'].nameOpp;
+        this.movesPlayer2=nav.extras.state['players'].pokemonOpp[0].moves;
+        this.img_Pokemon_Player2=nav.extras.state['players'].pokemonOpp[0].img;
         
       }
      
