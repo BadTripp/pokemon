@@ -12,6 +12,7 @@ export class MoveChoiserComponent implements OnInit {
   
 
   @Input() movesList!: Moves[];
+  @Input() disabled!:  boolean;
   @Output() clickedMove = new EventEmitter<Moves>();
 
   constructor(private srv: UtilsService) {

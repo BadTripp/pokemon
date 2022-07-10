@@ -22,7 +22,9 @@ export class BattlefieldComponent implements OnInit {
   usernamePlayer2 = "";
   movesPlayer2 : Moves [] = [];
   img_Pokemon_Player2 = "https://static-it.gamestop.it/images/products/298073/3max.jpg";
-
+  // TURN / TEXT 
+  turn=1;   
+  turnText="Player1";
 
   constructor(
     private srv: UtilsService,

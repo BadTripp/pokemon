@@ -15,22 +15,22 @@ export class PlayComponent implements OnInit {
 
   player1: Player = PLAYER;
   player2: Player = PLAYER;
+  player: any;
+  exportPlayer1: Player[] = [];
   pokemonList$: Observable<any> = this.srv.getAllPokemon();
   pokemonList: Pokemon[] = [];
   player1Form = this.formBuilder.group({
     username: '',
     pokemon1: POKEMON,
     pokemon2: POKEMON,
-    pokemon3: POKEMON
+    pokemon3: POKEMON,
+    usernameOpp: '',
+    pokemon1Opp: POKEMON,
+    pokemon2Opp: POKEMON,
+    pokemon3Opp: POKEMON
   });
-  player2Form = this.formBuilder.group({
-    username: '',
-    pokemon1: POKEMON,
-    pokemon2: POKEMON,
-    pokemon3: POKEMON
-  });
-  player1ready = false;
-  player2ready = false;
+  
+  ready = false;
   constructor(
     private srv:UtilsService,    
     private formBuilder: FormBuilder,
@@ -44,35 +44,25 @@ export class PlayComponent implements OnInit {
     console.log(this.pokemonList);
   }
 
-  onSubmit1(): void {
+  public onSubmit(): void {
     let c= this.player1Form.value.pokemon1!= POKEMON && this.player1Form.value.pokemon2!= POKEMON && this.player1Form.value.pokemon3!= POKEMON;
-    if(this.player1Form.valid && c){
-      this.player1.name=this.player1Form.value.username!;
-      this.player1.health=this.player1Form.value.pokemon1?.health!;
-      this.player1.pokemon=[this.player1Form.value.pokemon1!];
-      this.player1.pokemon.push(this.player1Form.value.pokemon2!);
-      this.player1.pokemon.push(this.player1Form.value.pokemon3!);
-      console.log('Your order has been submitted', this.player1); 
-      this.player1ready = true;
-    }
-  }
+    let c2= this.player1Form.value.pokemon1Opp!= POKEMON && this.player1Form.value.pokemon2Opp!= POKEMON && this.player1Form.value.pokemon3Opp!= POKEMON;
+    if(this.player1Form.valid && c && c2){
+      this.player={
+        name: this.player1Form.value.username!,
+        health: this.player1Form.value.pokemon1?.health!,
+        pokemon: [this.player1Form.value.pokemon1!, this.player1Form.value.pokemon2!, this.player1Form.value.pokemon3!],
 
-  onSubmit2(){
-    let c= this.player2Form.value.pokemon1!= POKEMON && this.player2Form.value.pokemon2!= POKEMON && this.player2Form.value.pokemon3!= POKEMON;
-    if(this.player2Form.valid && c){
-      this.player2.name=this.player2Form.value.username!;
-      this.player2.health=this.player2Form.value.pokemon1?.health!;
-      this.player2.pokemon=[this.player2Form.value.pokemon1!];
-      this.player2.pokemon.push(this.player2Form.value.pokemon2!);
-      this.player2.pokemon.push(this.player2Form.value.pokemon3!);
-      console.log('Your order has been submitted', this.player2); 
-      this.player2ready = true;
-    }
-  }
+        nameOpp: this.player1Form.value.usernameOpp!,
+        healthOpp: this.player1Form.value.pokemon1Opp?.health!,
+        pokemonOpp: [this.player1Form.value.pokemon1Opp!, this.player1Form.value.pokemon2Opp!, this.player1Form.value.pokemon3Opp!],
+      }
+      this.ready= true;
+  }}
 
   goBattle(){
-    console.log('routing in battlefield', this.player1, this.player2); 
+    console.log('routing in battlefield', this.player); 
     //routing in battlefield
-    this.route.navigate(["battlefield"],{state : { player1 : this.player1 , player2:this.player2}} );
+    this.route.navigate(["battlefield"],{state : { players : this.player }} );
   }
 }

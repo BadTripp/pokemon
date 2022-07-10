@@ -23,9 +23,15 @@
 
         <app-move-choiser [movesList]="movesPlayer1"></app-move-choiser>
     </div>
-    <div>
-       
+    <div class="container-space">
+       <div>
         <h1>Battlefield</h1>
+       </div>
+        <div>
+            <h4>Turno</h4>
+            <h5>{{turnText}}</h5>
+        </div>
+        
     </div>
     <div class="container-player2">
         <div class="username-txt-2">
@@ -45,7 +51,7 @@
                 alt="pokemon2">
         </div>
 
-        <app-move-choiser [movesList]="movesPlayer2"></app-move-choiser>
+        <app-move-choiser [disabled]="true" [movesList]="movesPlayer2"></app-move-choiser>
     </div>
 
 </div>
