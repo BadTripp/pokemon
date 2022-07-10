@@ -9,6 +9,8 @@ export function elaboraTurno(pokemon1: Pokemon, pokemon2: Pokemon, move1: Moves,
     //let typeEffectivness=mossa == lista debolezze ? 0.50 : lista efficacia ? 1.50 : 1 ;
     damage= pokemon1.attack + (move1.power * typeBonus) - pokemon2.defense;
     damageOpp= pokemon2.attack + (move2.power * typeBonus) - pokemon1.defense;
+    damage=damage <= 0 ? 1: damage;
+    damageOpp=damageOpp <= 0 ? 1: damageOpp;
     pokemon1.health-= damageOpp;
     pokemon2.health-= damage;
     return [pokemon1, pokemon2];
