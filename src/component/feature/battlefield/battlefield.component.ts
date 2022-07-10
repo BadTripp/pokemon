@@ -40,6 +40,7 @@ export class BattlefieldComponent implements OnInit {
         
         this.usernamePlayer1=nav.extras.state['players'].name;
         this.movesPlayer1=nav.extras.state['players'].pokemon[0].moves;
+        console.log(this.movesPlayer1=nav.extras.state['players'].pokemon[0].moves);
         this.img_Pokemon_Player1=nav.extras.state['players'].pokemon[0].img;
         
       }

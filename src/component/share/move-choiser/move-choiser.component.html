@@ -1,12 +1,13 @@
-<div>
+
+
     <table>
         <tr>
-            <td><button  [disabled]="disabled"           onclick="onClickMove(movesList[0].name)">{{movesList[0].name}} </button> </td>
-            <td><button [disabled]="disabled" onclick="onClickMove(movesList[1].name)">{{movesList[1].name}} </button></td>
+            <td><button (onclick)="onClickMove(movesList[0])" >{{movesList[0].name}} 1</button> </td>
+            <td><button  (onclick)="onClickMove(movesList[1])" >{{movesList[1].name}} 2</button></td>
         </tr>
         <tr>
-            <td><button [disabled]="disabled" onclick="onClickMove(movesList[2].name)">{{movesList[2].name}} 3</button></td>
-            <td><button [disabled]="disabled" onclick="onClickMove(movesList[3].name)">{{movesList[3].name}} 4</button></td>
+            <td><button  (onclick)="onClickMove(movesList[2])" >{{movesList[2].name}} 3</button></td>
+            <td><button  (onclick)="onClickMove(movesList[3])" >{{movesList[3].name}} 4</button></td>
         </tr>
     </table>
-</div>
+

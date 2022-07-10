@@ -1,20 +1,17 @@
+
 button {
     width: 15em;
     height: 3.5em;
 
-    font-weight: 600;
+    font-weight: 500;
     color:black;
     border-radius: 25px;
     border: 1px solid rgb(23, 177, 177);
     background-color: rgb(0, 255, 255);
 }
-button:hover{
+button :hover{
     cursor: pointer;
+    color:black;
     border: 1px solid rgb(0, 255, 255);
     background-color: rgb(23, 177, 177);
-}
-button :disabled{
-    cursor: pointer;
-    border: 1px solid rgb(225, 0, 83);
-    background-color: rgb(248, 17, 60);
 }
