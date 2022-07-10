@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BattlefieldComponent } from '../component/feature/battlefield/battlefield.component';
 import { UtilsService } from '../component/service/utils.service';
 import { MoveChoiserComponent } from 'src/component/share/move-choiser/move-choiser.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module'; 
 import { AppComponent } from './app.component';
 import { PokemonListComponent } from '../component/feature/pokemon-list/pokemon-list.component';
 import { HomeComponent } from './home/home.component';
