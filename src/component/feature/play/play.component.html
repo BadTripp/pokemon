@@ -1,6 +1,6 @@
 <div class="container">
     
-    
+    <div class="form-players">
     <form class="form-play" [formGroup]="player1Form" (ngSubmit)="onSubmit1()">
         <h2>Player 1</h2>
         <b>Username</b>
@@ -30,7 +30,9 @@
         </select>
     </div>
     <div class="button-form">
-    <button type="button" class="btn-play" type="submit">Conferma Giocatore 1</button>
+    <button
+     [hidden]="player1ready" type="button" class="btn-play" type="submit">Conferma Giocatore 1</button>
+    <img [hidden]="!player1ready" height="70em" width="150em" src="/assets/confirm.png">
     </div>
     </form>
 
@@ -61,10 +63,13 @@
         </select>
         </div>
         <div class="button-form">
-    <button type="button" class="btn-play" type="submit">Conferma Giocatore 2</button>
-        </div>
+    <button [hidden]="player2ready" type="button" class="btn-play" type="submit">Conferma Giocatore 2</button>
+    <img [hidden]="!player2ready" height="70em" width="150em" src="/assets/confirm.png">
+</div>
 </form>
-
-    <button *ngIf="player1ready&&player2ready" type="button" class="btn-play" onclick="goBattle()">Gioca</button>
-
+</div>
+    <div class="btn-play-container">
+        <button *ngIf="player1ready&&player2ready" type="button" class="btn-play" (click)="goBattle()">Gioca</button>
+    </div>
+    
 </div>

@@ -21,4 +21,6 @@ export class UtilsService {
   getAllMoves(){
     return this.httpClient.post(this.url + "/getallmoves", {});
   }
+
+ 
 }

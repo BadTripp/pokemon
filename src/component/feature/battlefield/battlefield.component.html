@@ -1,2 +1,51 @@
 <!-- <p>battlefield works!</p>
 <p>{{pokemon | json}}</p> -->
+<div class="container">
+
+
+    <div class="container-player1">
+        <div class="username-txt-1">
+            <b>{{this.usernamePlayer1}}</b>
+        </div>
+
+        <div class="progress-1">
+            <div class="animated-progress-1 progress-green">
+                <span data-progress="60"></span>
+            </div>
+        </div>
+
+        <div class="pokemon1">
+
+            <img height="150em" width="150em" [src]="img_Pokemon_Player1"
+                alt="pokemon1">
+        </div>
+
+
+        <app-move-choiser [movesList]="movesPlayer1"></app-move-choiser>
+    </div>
+    <div>
+       
+        <h1>Battlefield</h1>
+    </div>
+    <div class="container-player2">
+        <div class="username-txt-2">
+            <b>{{usernamePlayer2}}</b>
+        </div>
+
+
+        <div class="progress-2">
+            <div class="animated-progress-2 progress-green">
+                <span data-progress="60"></span>
+            </div>
+        </div>
+
+        <div class="pokemon2">
+            <img height="150em" width="150em"
+                [src]="img_Pokemon_Player2"
+                alt="pokemon2">
+        </div>
+
+        <app-move-choiser [movesList]="movesPlayer2"></app-move-choiser>
+    </div>
+
+</div>

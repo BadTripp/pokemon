@@ -1,12 +1,12 @@
 .container{
     
     
-    display: flex;
-    
-    justify-content: space-around;
     
     
-    flex-direction: row;
+    justify-content: center;
+    
+    
+    
     padding: 2em 7%;
     border-radius: 25px;
     background-color:rgba(22, 194, 197, 0.5);
@@ -24,7 +24,7 @@ form{
     
 }
 .form-play{
-    align-self: center;
+    
 }
 .form-play  input {
     height: 40px;
@@ -88,4 +88,26 @@ form{
 }
 .button-form{
     margin-left: 20em;
+}
+.btn-play-container{
+    text-align: center;
+}
+.btn-play {
+    width: 15em;
+    height: 3.5em;
+    margin-top: 5em;
+    font-weight: 800;
+    
+    color:black;
+    border-radius: 25px;
+    border: 2.5px solid rgba(5, 80, 17, 0.803);
+    background-color: rgb(0, 226, 23);
+}
+.btn-play :hover{
+    font-size: larger;
+}
+.form-players{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

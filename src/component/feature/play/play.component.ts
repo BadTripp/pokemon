@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { MOVE, Moves } from 'src/app/Interface/Moves';
 import { PLAYER, Player } from 'src/app/Interface/Player';
@@ -33,6 +34,7 @@ export class PlayComponent implements OnInit {
   constructor(
     private srv:UtilsService,    
     private formBuilder: FormBuilder,
+    private route : Router
     ) { }
 
   ngOnInit(): void {
@@ -71,5 +73,6 @@ export class PlayComponent implements OnInit {
   goBattle(){
     console.log('routing in battlefield', this.player1, this.player2); 
     //routing in battlefield
+    this.route.navigate(["battlefield"],{state : { player1 : this.player1 , player2:this.player2}} );
   }
 }

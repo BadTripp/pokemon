@@ -1,0 +1,99 @@
+.container{
+    align-self: center;
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 20px 7%;
+    border-radius: 25px;
+    background-color:rgba(22, 194, 197, 0.5);
+    justify-content: space-between;
+    
+    
+    
+}
+.pokemon-player1{
+    align-self: flex-start;
+}
+.container-player1{
+    justify-content: space-between;
+    align-self: flex-end;
+    display:flex;
+    flex-direction:column;
+}
+.pokemon1{
+    text-align:center;
+    padding: 5em;
+    background:url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
+    background-size:cover;
+    border-radius: 40%;
+}
+.pokemon2{
+    text-align:center;
+    padding: 5em;
+    background:url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
+    background-size:cover;
+    border-radius: 40%;
+}
+.username-txt-1{
+    text-align:center;
+}
+.username-txt-2{
+    text-align:center;
+}
+.container-player2{
+    align-self: flex-end;
+}
+.progress-green span {
+    background-color: rgb(38, 226, 38);
+    text-align:center;
+  }
+.animated-progress-1 {
+    width: 15em;
+    height: 1em;
+    border-radius: 5px;
+    
+    border: 2px solid rgb(7, 65, 238);
+    overflow: hidden;
+    position: relative;
+  }
+  .progress-1{
+      display: flex;
+      justify-content: center;
+  }
+  .progress-2{
+    display: flex;
+    justify-content: center;
+}
+  
+  .animated-progress-1 span {
+    height: 100%;
+    display: block;
+    /* valore del progress */
+    width: 50%; 
+    color: rgb(255, 251, 251);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+  }
+  .animated-progress-2 {
+    width: 15em;
+    height: 1em;
+    border-radius: 5px;
+    border: 2px solid rgb(7, 65, 238);
+    overflow: hidden;
+    position: relative;
+    
+  }
+  
+  .animated-progress-2 span {
+    height: 100%;
+    display: block;
+    /* valore del progress */
+    width: 50%; 
+    color: rgb(255, 251, 251);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+  }

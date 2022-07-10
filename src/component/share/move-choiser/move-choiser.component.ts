@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Moves } from 'src/app/Interface/Moves';
+import { UtilsService } from 'src/component/service/utils.service';
 
 @Component({
   selector: 'app-move-choiser',
@@ -8,10 +9,15 @@ import { Moves } from 'src/app/Interface/Moves';
 })
 export class MoveChoiserComponent implements OnInit {
 
+  
+
   @Input() movesList!: Moves[];
   @Output() clickedMove = new EventEmitter<Moves>();
 
-  constructor() { }
+  constructor(private srv: UtilsService) {
+
+   
+   }
 
   ngOnInit(): void {
     
