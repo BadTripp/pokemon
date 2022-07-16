@@ -5,13 +5,24 @@
 
     <div class="container-player1">
         <div class="username-txt-1">
-            <b>{{this.usernamePlayer1}}</b>
+            Player 1:<b>{{this.usernamePlayer1}}</b>
         </div>
 
         <div class="progress-1">
+
+            <img height="15em" width="15em" [src]="(pokemon_Active_id1 == 2)? pokeballOpen : pokeballClose">
+            <img height="15em" width="15em" [src]="(pokemon_Active_id1 == 1)? pokeballOpen : pokeballClose">
+            <img height="15em" width="15em" [src]="(pokemon_Active_id1 == 0)? pokeballOpen : pokeballClose">
+
             <div class="animated-progress-1 progress-green">
+<<<<<<< Updated upstream
                 <span data-progress="90"></span>
+=======
+                <span [style.width.%]="healthP1" ></span>
+                
+>>>>>>> Stashed changes
             </div>
+            
         </div>
 
         <div class="pokemon1">
@@ -20,8 +31,8 @@
                 alt="pokemon1">
         </div>
 
-
-        <app-move-choiser [movesList]="movesPlayer1"></app-move-choiser>
+        <h6>{{this.pokemon_Active_Player1.name}}</h6>
+        <app-move-choiser #player1Moves [movesList]="movesPlayer1" (clickedMove)="on_SelectMove_Player1($event)" ></app-move-choiser>
     </div>
     <div class="container-space">
        <div>
@@ -40,18 +51,34 @@
 
 
         <div class="progress-2">
+
+            
+
             <div class="animated-progress-2 progress-green">
+<<<<<<< Updated upstream
                 <span data-progress="40"></span>
+=======
+                <span [style.width.%]="healthP2" ></span>
+>>>>>>> Stashed changes
             </div>
+            <img height="15em" width="15em" [src]="(pokemon_Active_id2 == 0)? pokeballOpen : pokeballClose">
+            <img height="15em" width="15em" [src]="(pokemon_Active_id2 == 1)? pokeballOpen : pokeballClose">
+            <img height="15em" width="15em" [src]="(pokemon_Active_id2 == 2)? pokeballOpen : pokeballClose">
         </div>
 
         <div class="pokemon2">
             <img height="150em" width="150em"
                 [src]="img_Pokemon_Player2"
                 alt="pokemon2">
-        </div>
+                
 
+<<<<<<< Updated upstream
         <app-move-choiser  [movesList]="movesPlayer2"></app-move-choiser>
+=======
+        </div>
+            <h6>{{this.pokemon_Active_Player2.name}}</h6>
+        <app-move-choiser #player2Moves (clickedMove)="on_SelectMove_Player2($event)" [movesList]="movesPlayer2" ></app-move-choiser>
+>>>>>>> Stashed changes
     </div>
 
 </div>

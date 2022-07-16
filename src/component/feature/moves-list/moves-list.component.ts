@@ -19,7 +19,7 @@ export class MovesListComponent implements OnInit {
     this.movesList$.subscribe((m) => {
       this.movesList= m;
     });
-    console.log(this.movesList)
+    
   }
   
 

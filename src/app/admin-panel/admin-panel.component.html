@@ -1,0 +1,75 @@
+<!-- pokemonForm = this.form.group({
+    name:["",Validators.required],
+    level:["",Validators.required],
+    attack:["",Validators.required],
+    type:["",Validators.required],
+    special_attack:["",Validators.required],
+    special_defense:["",Validators.required],
+    speed:["",Validators.required],
+    health:["",Validators.required],
+
+    moves : this.form.group({
+      move1:["",Validators.required],
+      move2:["",Validators.required],
+      move3:["",Validators.required],
+      move4:["",Validators.required],
+    }) -->
+<div class="container">
+    <div class="newpokemon-container">
+        <h1 class="text-center">Pokemon Creator</h1>
+        <div class="form-container">
+            
+            <form class="form-newpoke" [formGroup]="pokemonForm" (ngSubmit)="onSubmit()">
+                <div class="flex-row">
+                    <input class="img-input" formControlName="img" placeholder="img url">
+                    <img height="50em" width="50em" [src]="this.pokemonForm.value.img">
+                </div>
+                <div class="flex-row">
+                   Name <input formControlName="name" placeholder="name">
+                   Level<input formControlName="level" placeholder="level" type="number">
+                   Attack <input formControlName="attack" placeholder="attack" type="number" >
+                   Defense <input formControlName="defense" placeholder="defense" type="number" >
+                   Type<input formControlName="type" placeholder="type">
+                </div>
+                <div class="flex-row">
+                    Special_attack<input formControlName="special_attack" placeholder="special_attack"  >
+                    Special_defense<input formControlName="special_defense" placeholder="special_defense" >
+                    Speed<input formControlName="speed" placeholder="speed" type="number">
+                    Health <input formControlName="health" placeholder="health" type="number" >
+                    
+                </div>
+                <div class="move-container ">
+                    <div formGroupName="moves">
+                        Move1<select formControlName="move1" [(ngModel)]="move1" placeholder="">
+                            <option selected="selected" value="Move1">Move1</option>
+                            <option *ngFor="let move of this.movesList" [ngValue]="move">{{move | json}}</option>
+                        </select>
+                        Move2<select formControlName="move2" [ngModel]="move2" placeholder="">
+                            <option value="">Move2</option>
+                            <option *ngFor="let move of this.movesList" [ngValue]="move">{{move | json}}</option>
+                        </select>
+                        Move3<select formControlName="move3" [ngModel]="move3" placeholder="" >
+                            <option value="">Move3</option>
+                            <option *ngFor="let move of this.movesList" [ngValue]="move">{{move | json}}</option>
+                        </select>
+                        Move4<select formControlName="move4" [ngModel]="move4" placeholder="">
+                            <option >Move4</option>
+                            <option *ngFor="let move of this.movesList" [ngValue]="move">{{move | json}}</option>
+                        </select>
+                        
+                    </div>
+                    
+                </div>
+                Description
+                <textarea formControlName="description" placeholder="description">
+                    Desc
+            </textarea>
+                
+                <button [disabled]="!this.pokemonForm.valid " type="submit">Salva poke</button>
+            </form>
+        </div>
+        <div class="pokemonList-container">
+            <app-pokemon-list></app-pokemon-list>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,7 @@ import { NavbarComponent } from '../component/share/navbar/navbar.component';
 import { PlayComponent } from '../component/feature/play/play.component';
 import { MovesListComponent } from '../component/feature/moves-list/moves-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     PlayComponent,
     MovesListComponent,
-    MoveChoiserComponent
+    MoveChoiserComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,

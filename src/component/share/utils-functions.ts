@@ -18,21 +18,22 @@ export function elaboraTurno(pokemon1: Pokemon, pokemon2: Pokemon, move1: Moves,
     liveOpp=pokemon2.health <= damage ? false: true;
     damage=pokemon1.health <= damage ? 0: damageOpp;
     damageOpp=damageOpp <= 0 ? 1: damageOpp;
-    pokemon1.health-= damageOpp;
-    pokemon2.health-= damage;
+    pokemon1.health-= damageOpp; console.log(damageOpp)
+    pokemon2.health-= damage;   console.log(damage)
+    console.log(pokemon2.health)
     return [pokemon1, pokemon2];
 };
 
 export function elabora(pokemon1: Pokemon, pokemon2: Pokemon, move1: Moves, move2:Moves){
     if(pokemon1.speed>pokemon2.speed){
-        elaboraTurno(pokemon1, pokemon2, move1, move2);
+       return elaboraTurno(pokemon1, pokemon2, move1, move2);
     } else if(pokemon2.speed>pokemon1.speed){
-        elaboraTurno(pokemon2, pokemon1, move2, move1);
+        return elaboraTurno(pokemon2, pokemon1, move2, move1);
     } else {
         if(Math.random()==0){
-            elaboraTurno(pokemon1, pokemon2, move1, move2);
+            return   elaboraTurno(pokemon1, pokemon2, move1, move2);
         } else {
-            elaboraTurno(pokemon2, pokemon1, move2, move1);
+            return  elaboraTurno(pokemon2, pokemon1, move2, move1);
         }
     }
 };

@@ -21,6 +21,8 @@
     flex-direction:column;
 }
 .pokemon1{
+    display: flex;
+    justify-content: center;
     text-align:center;
     padding: 5em;
     background:url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
@@ -28,6 +30,8 @@
     border-radius: 40%;
 }
 .pokemon2{
+    display: flex;
+    justify-content: center;
     text-align:center;
     padding: 5em;
     background:url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
@@ -59,17 +63,28 @@
   .progress-1{
       display: flex;
       justify-content: center;
+
+  }
+  .progress-1 img {
+      padding: 0.3em;
   }
   .progress-2{
     display: flex;
     justify-content: center;
+}
+.progress-2 img {
+    padding: 0.3em;
 }
   
   .animated-progress-1 span {
     height: 100%;
     display: block;
     /* valore del progress */
+<<<<<<< Updated upstream
     width: 0; 
+=======
+    
+>>>>>>> Stashed changes
     color: rgb(255, 251, 251);
     line-height: 30px;
     position: absolute;
@@ -90,7 +105,11 @@
     height: 100%;
     display: block;
     /* valore del progress */
+<<<<<<< Updated upstream
     width: 0; 
+=======
+     
+>>>>>>> Stashed changes
     color: rgb(255, 251, 251);
     line-height: 30px;
     position: absolute;
@@ -103,3 +122,4 @@
       flex-direction: column;
       justify-content: space-between;
   }
+  

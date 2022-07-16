@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Pokemon } from 'src/app/Interface/Pokemon';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,10 @@ export class UtilsService {
 
   constructor(private httpClient: HttpClient) { }
   
+  createPokemon(pokemon: Pokemon){
+    return this.httpClient.post(this.url + "/createPokemon",{pokemon});
+  }
+
   getPokemon(pokemonId: string){
     return this.httpClient.post(this.url + "/findPokemon?name=" + pokemonId, {});
   }

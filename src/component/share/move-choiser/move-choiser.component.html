@@ -2,12 +2,21 @@
 
     <table>
         <tr>
+<<<<<<< Updated upstream
             <td><button (onclick)="onClickMove(movesList[0])" >{{movesList[0].name}} 1</button> </td>
             <td><button  (onclick)="onClickMove(movesList[1])" >{{movesList[1].name}} 2</button></td>
         </tr>
         <tr>
             <td><button  (onclick)="onClickMove(movesList[2])" >{{movesList[2].name}} 3</button></td>
             <td><button  (onclick)="onClickMove(movesList[3])" >{{movesList[3].name}} 4</button></td>
+=======
+            <td ><button [disabled]="!p[1] || !p[2] || !p[3]" [className] = " p[0]  ? ' button ' : ' button-sel' "  (click)="move_Selected(0)" (click)="onClickMove(movesList[0])">{{movesList[0].name}}</button> </td>
+            <td><button  [disabled]="!p[0] || !p[2] || !p[3]" [className] = " p[1]   ? ' button ' : ' button-sel' "  (click)="move_Selected(1)" (click)="onClickMove(movesList[1])">{{movesList[1].name}} </button></td>
+        </tr> 
+        <tr>
+            <td><button  [disabled]="!p[0] || !p[1] || !p[3]"[className] = " p[2]   ? ' button ' : ' button-sel' "  (click)="move_Selected(2)"(click)="onClickMove(movesList[2])">{{movesList[2].name}} </button></td>
+            <td><button  [disabled]="!p[0] || !p[1] || !p[2]"[className] = " p[3]   ? ' button ' : ' button-sel' "  (click)="move_Selected(3)"(click)="onClickMove(movesList[3])">{{movesList[3].name}} </button></td>
+>>>>>>> Stashed changes
         </tr>
     </table>
 
